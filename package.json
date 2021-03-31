@@ -1,0 +1,16 @@
+{
+  "name": "DBDJS",
+  "version": "1.0.0",
+  "description": "A simple discord bot made with dbd.js wrapper",
+  "main": "src/dbd.js",
+  "scripts": {
+    "start": "node src/dbd.js"
+  },
+  "keywords": [],
+  "author": "Colderry",
+  "license": "ISC",
+  "dependencies": {
+    "dbd.js": "^2.2.6",
+    "glob": "^7.1.6"
+  }
+}
