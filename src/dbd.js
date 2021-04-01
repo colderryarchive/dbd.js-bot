@@ -1,20 +1,12 @@
-require("./Utils/Client");
-const { client } = require("./Utils/Client");
-const fs = require("fs");
-const glob = require('glob')
-const path = require("path")
+const dbd = require("dbd.js")
 
-client.onMessage()
+const { token } = require("./modules/config.json")
 
-const commands = glob.sync("./src/Commands/**/**/*.js");
-
-for (const files of commands) {
-
-    const command = require(path.resolve(files))
-    client.command({
-      name: command.name,
-      aliases: command.aliases,
-      code: command.code,
-    })
-
-}
+const bot = new dbd.Bot({
+  mobile: false, 
+  token: token, 
+  prefix: ["d!"] 
+})
+ 
+bot.onMessage() 
+bot.loadCommands(`./src/commands/`)
