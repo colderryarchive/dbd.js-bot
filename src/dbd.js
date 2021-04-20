@@ -8,8 +8,8 @@ const bot = new dbd.Bot({
   prefix: ["$getServerVar[prefix]"]
 });
 
-bot.loadCommands(`./src/commands/`);
+bot.loadCommands(`./src/Commands/`);
 
-require("./variables/Script/Load")(bot);
+require("./Variables/Script/Load")(bot);
  
 bot.onMessage();
